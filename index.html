@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSIK NOVA</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* --- Updated CSS for Top Bar Layout --- */
+    header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    /* --- ADJUSTMENTS HERE --- */
+    .logo-row .logo {
+      /* Title font size remains smaller for better balance */
+      font-size: 20px; 
+      margin: 0;
+    }
+
+    .logo-row img {
+      /* Increased the logo image size significantly */
+      width: 85px; 
+      height: auto;
+      flex-shrink: 0;
+    }
+    /* --- END ADJUSTMENTS --- */
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      white-space: nowrap;
+    }
+
+    #authButton, .welcome-message {
+      padding: 5px 15px;
+    }
+
+    /* Media query for smaller screens to adjust layout */
+    @media (max-width: 900px) {
+      header {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 15px;
+      }
+      .logo-row {
+        width: 100%;
+        justify-content: center;
+      }
+      nav {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+      }
+      /* Adjust mobile logo size */
+      .logo-row img {
+        width: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="image gradient" src="gradient.png" alt="gradient">
+  <div class="layer-blur"></div>
+
+  <div class="container">
+    <header>
+      <div class="logo-row">
+        <h1 class="logo">EMPOWERING THE NATION</h1>
+        <img src="logo.png" alt="logo">
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a> 
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a id="authButton" href="signin.html" class="btn-signing">SIGN IN</a>
+    </header>
+
+    <main>
+      <div class="content">
+        <div class="tag-box">
+          <div class="tag">
+            <span>INTRODUCING</span>
+          </div>
+        </div>
+
+        <h1>Empowering The Nation</h1>
+
+        <p class="description">
+          IS A SMALL TO MID-SIZE ENTERPRISE THAT PROVIDES A WIDE RANGE OF SERVICES, AND COURSES THAT HELP TO PROVIDE SKILL TRAINING FOR INDIVIDUALS WHO ARE IN NEED AND WHO WERE NEVER GIVEN THE CHANCE TO UPSKILL THEMSELVES. WE OFFER A 6 MONTH AND 6 WEEK COURSE
+        </p>
+
+        <div class="plans-section">
+          <a href="plans.html" class="btn-get-started">PLANS &gt;</a>
+        </div>
+      </div>
+    </main>
+
+    <spline-viewer class="galixy-3d" url="https://prod.spline.design/zyv7vpiAMR6drhTs/scene.splinecode"></spline-viewer>
+  </div>
+
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.51/build/spline-viewer.js"></script>
+
+  <script>
+    // Display username if logged in
+    const username = localStorage.getItem("username");
+    const authButton = document.getElementById("authButton");
+
+    if (username) {
+      authButton.outerHTML = `<span class="welcome-message">Welcome, ${username}!</span>`;
+    }
+  </script>
+</body>
+</html>
