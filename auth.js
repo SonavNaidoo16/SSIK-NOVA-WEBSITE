@@ -21,3 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+function signOut() {
+    localStorage.removeItem("username");
+    window.location.href = 'signin.html';
+}

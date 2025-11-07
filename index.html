@@ -98,7 +98,7 @@
         <a href="contact.html">Contact</a>
       </nav>
 
-      <a id="authButton" href="signin.html" class="btn-signing">SIGN IN</a>
+      <div id="auth-container"></div>
     </header>
 
     <main>
@@ -125,14 +125,19 @@
   </div>
 
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.51/build/spline-viewer.js"></script>
-
+  <script src="auth.js"></script>
   <script>
     // Display username if logged in
     const username = localStorage.getItem("username");
-    const authButton = document.getElementById("authButton");
+    const authContainer = document.getElementById("auth-container");
 
     if (username) {
-      authButton.outerHTML = `<span class="welcome-message">Welcome, ${username}!</span>`;
+      authContainer.innerHTML = `
+        <span class="welcome-message">Welcome, ${username}!</span>
+        <button onclick="signOut()" class="btn-signing">SIGN OUT</button>
+      `;
+    } else {
+      authContainer.innerHTML = '<a href="signin.html" class="btn-signing">SIGN IN</a>';
     }
   </script>
 </body>
