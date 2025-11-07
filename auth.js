@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('password').value;
 
             // a dummy user for demonstration
-            if (email === 'user@ssiknova.com' && password === 'password') {
+            if (email && password) {
                 alert('Login successful!');
                 const username = email.split("@")[0]; // extract name before '@'
                 localStorage.setItem("username", username);
