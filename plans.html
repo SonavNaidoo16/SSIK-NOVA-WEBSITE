@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set and viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title of the page -->
     <title>EMPOWERING THE NATION</title>
+  <!-- Link to the external stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Background Gradient -->
+  <!-- Background Gradient Image -->
   <img class="image gradient" src="gradient.png" alt="Gradient Background" />
+  <!-- Background Blur Effect -->
   <div class="layer-blur"></div>
 
+  <!-- Main container for the page content -->
   <div class="container">
-    <!-- Header -->
+    <!-- Header section -->
     <header>
+      <!-- Logo of the website -->
       <h1 class="logo">EMPOWERING THE NATION</h1>
+      <!-- Navigation menu -->
       <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <!-- Sign-in button -->
       <button class="btn-signing">SIGN IN</button>
     </header>
 
-    <!-- Main Hero Section -->
+    <!-- Main content of the page -->
     <main>
+      <!-- Content section -->
       <div class="content">
-        <!-- Tag Section -->
+        <!-- "Plans" tag box -->
         <div class="tag-box">
           <div class="tag">
             <span>Plans</span>
           </div>
         </div>
 
-        <!-- Courses Section -->
+        <!-- Courses section -->
         <div class="info-container">
           <!-- Six-Month Courses -->
           <div class="info-box">
@@ -62,7 +71,9 @@
         <!-- Fee Calculator Section -->
         <div class="calculator-container">
           <h2>Course Fee Calculator</h2>
+          <!-- Form for selecting courses and entering contact details -->
           <form id="courseForm">
+            <!-- List of available courses with checkboxes -->
             <div class="course-list">
               <label><input type="checkbox" name="course" value="First Aid" data-fee="1500" /> First Aid - R1500</label>
               <label><input type="checkbox" name="course" value="Sewing" data-fee="1500" /> Sewing - R1500</label>
@@ -73,18 +84,20 @@
               <label><input type="checkbox" name="course" value="Landscaping" data-fee="1500" /> Landscaping - R1500</label>
             </div>
 
+            <!-- Input fields for contact details -->
             <div class="contact-details">
               <input type="text" id="name" placeholder="Your Name" required />
               <input type="tel" id="phone" placeholder="Your Phone Number" required />
               <input type="email" id="email" placeholder="Your Email" required />
             </div>
 
+            <!-- Button to trigger the calculation -->
             <button type="button" id="calculateBtn" class="btn-get-started">
               Calculate Total
             </button>
           </form>
 
-          <!-- Fee Summary -->
+          <!-- Section to display the fee summary -->
           <div id="total-fees">
             <h3>Fee Summary</h3>
             <p id="subtotal"></p>
@@ -97,6 +110,7 @@
     </main>
   </div>
 
+  <!-- Link to the external JavaScript file for calculations -->
   <script src="calculate.js"></script>
 </body>
 </html>

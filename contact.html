@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
     <title>EMPOWERING THE NATION</title>
+    <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
+    <!-- Background Gradient Image -->
     <img class="image gradient" src="gradient.png" alt="gradient">
+    <!-- Background Blur Effect -->
     <div class="layer-blur"></div>
 
+    <!-- Main container for the page content -->
     <div class="container">
+        <!-- Header section -->
         <header>
+            <!-- Logo of the website -->
       <h1 class="logo">EMPOWERING THE NATION</h1>
 
+            <!-- Navigation menu -->
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a> 
@@ -21,29 +30,38 @@
                 <a href="contact.html" class=" active">Contact</a> 
             </nav>
         </header> 
+        <!-- Main content of the page -->
         <main>
+            <!-- Content section -->
             <div class="content">
+                <!-- "CONTACT" tag box -->
                 <div class="tag-box">
                     <div class="tag"><span>CONTACT</span></div>
                 </div>
 
+                <!-- Main heading -->
                 <h1>Contact Us</h1>
+                <!-- Description -->
                 <p class="description">
                     Have questions or need assistance? Get in touch with us through the
                     form below.
                 </p>
 
+                <!-- Contact form -->
                 <form id="contactForm" action="#" method="post">
+                    <!-- Full Name input -->
                     <p>
                         <label for="name"><strong>Full Name:</strong></label><br />
                         <input type="text" id="name" name="name" required />
                     </p>
 
+                    <!-- Email Address input -->
                     <p>
                         <label for="email"><strong>Email Address:</strong></label><br />
                         <input type="email" id="email" name="email" required />
                     </p>
                     
+                    <!-- Reason for Contact dropdown -->
                     <p>
                         <label for="type"><strong>Reason for Contact:</strong></label><br />
                         <select id="type" name="type" required>
@@ -55,22 +73,28 @@
                         </select>
                     </p>
 
+                    <!-- Message textarea -->
                     <p>
                         <label for="message"><strong>Your Message:</strong></label><br />
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </p>
 
+                    <!-- Error message display -->
                     <div id="error-message" style="color: red; margin-bottom: 10px;"></div>
                     
+                    <!-- Submit button -->
                     <p><button type="submit">Send Message</button></p>
                     
+                    <!-- Response message display -->
                     <div id="response" style="margin-top: 15px;"></div>
                 </form>
+                <!-- Embedded Google Map -->
 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4450.4274084103!2d28.05412507541203!3d-26.107599977136225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDA2JzI3LjQiUyAyOMKwMDMnMjQuMSJF!5e1!3m2!1sen!2sza!4v1762453160980!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 
             </div>
         </main>
     </div>
+    <!-- Link to the external JavaScript file -->
     <script src="contact.js"></script> 
 </body>
 </html>
